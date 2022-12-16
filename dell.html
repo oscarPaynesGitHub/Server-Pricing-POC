@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent2">
+
+        <div class="Top-of-page-cto">
+            <a class=""><i class="fa fa-bars" id="bar-ting"></i></a>
+            <input class="search-bar" type="text" placeholder="Search for a product..">
+            <h1 id="dell-cto-h1"><a><i class="fa fa-server"></i></a>Dell CTO<a><i class="fa fa-server"></i></a></h1>
+            <div class="tab">    
+                <button class="tabLinks" id="dell-CTO-rack" onclick="openOption(event, 'Rack')">Rack</button>
+                <button class="tabLinks" id="dell-CTO-blade" onclick="openOption(event, 'Blade')">Blade</button>
+                <button class="tabLinks" id="dell-CTO-tower" onclick="openOption(event, 'Tower')">Tower</button>
+                <button class="tabLinks" id="dell-CTO-spares" onclick="openOption(event, 'Spares')">Spares</button>
+                <button class="tabLinks" id="dell-CTO-controller" onclick="openOption(event, 'Controller')">Controller</button>
+            </div>
+        </div>
+
+        <div class="Left-sidebar-cto">
+            <form>
+                <label id="currency-label" for="USD">USD</label>
+                <label id="currency-label" for="GBP">GBP</label><br>
+                <input class="currency-side-input" type="number" min="0" name="currency-USD">
+                <input class="currency-side-input" type="number" min="0" name="currency-GBP"><br>
+
+                <label id="currency-label" for="EUR">EUR</label>
+                <label id="currency-label" for="AUD">AUD</label><br>
+                <input class="currency-side-input" type="number" min="0" name="currency-EUR">
+                <input class="currency-side-input" type="number" min="0" name="currency-AUD"><br>
+
+                <label id="currency-label" for="NZD">NZD</label>
+                <label id="currency-label" for="JPY">JPY</label><br>
+                <input class="currency-side-input" type="number" min="0" name="currency-NZD">
+                <input class="currency-side-input" type="number" min="0" name="currency-JPY"><br>
+
+                <label id="currency-label" for="CAD">CAD</label><br>
+                <input class="currency-side-input" type="number" min="0" name="currency-CAD">
+            </form>
+
+            <p id="users-name">Oscar Payne <a><i class="fa fa-chevron-down"></i></a></p>
+
+            <p id="dashboard"><a><i class="fa fa-th-large"></i></a> Dashboard</p>
+            <p id="dashboard"><a><i class="fa fa-shopping-cart"></i></a> Products</p>
+            <p id="dashboard"><a><i class="fa fa-line-chart"></i></a> Reports</p>
+            <p id="dashboard"><a><i class="fa fa-tasks"></i></a> Product Management</p>
+            <p id="dashboard"><a><i class="fa fa-recycle"></i></a> RMA</p>
+            <p id="dashboard"><a><i class="fa fa-shopping-basket"></i></a> Brokerbin</p>
+            <p id="dashboard"><a><i class="fa fa-lightbulb-o"></i></a> User Ideas</p>
+            <p id="dashboard"><a><i class="fa fa-info"></i></a> Information</p>
+            <p id="dashboard"><a><i class="fa fa-phone"></i></a> Phone List</p>
+            <p id="dashboard"><a><i class="fa fa-eye"></i></a> Watchlist</p>
+            <p id="dashboard"><a><i class="fa fa-pagelines"></i></a> Erp</p>
+            <p id="dashboard"><a><i class="fa fa-money"></i></a> Currencies</p>
+            <p id="dashboard"><a><i class="fa fa-cog"></i></a> Configuration</p>
+        </div>
+
+
+        <div id="Rack" class="tab-content">
+            <h1>Rack City</h1>
+            <div class="btn-rack-gen">
+                <button id="gen-btn-10th">10th</button>
+                <button id="gen-btn-11th">11th</button>
+                <button id="gen-btn-12th">12th</button>
+                <button id="gen-btn-13th">13th</button>
+                <button id="gen-btn-14th">14th</button>
+                <button id="gen-btn-15th">15th</button>
+            </div>
+            <h2>14th Generation Racks</h2>
+            <table>
+                <tr>
+                  <th id="PN-table">PN</th>
+                  <th id="Description-table">Description</th>
+                  <th id="broker-price">BB Price</th>
+                  <th id="min-price">MIN</th>
+                  <th id="max-price">MAX</th>
+                  <th><button>Export</button></th>
+                </tr>
+                <tr>
+                  <td class="part-numbers">PER640-8SFF</td>
+                  <td>DELL R640 8SFF CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                  <td>$<input id="per640-price" class="price-input" type="number" min="0" placeholder="1375"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="1300"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="0"></td>
+                  <td><button onclick="update()">Save</button></td>
+                </tr>
+                <tr>
+                  <td class="part-numbers">PER640-10SFF</td>
+                  <td>DELL R640 10SFF CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="150"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="120"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="200"></td>
+                  <td><button>Save</button></td>
+                </tr>
+                <tr>
+                  <td class="part-numbers">PER640-10NVME</td>
+                  <td>DELL R640 10NVME CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="150"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="120"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="200"></td>
+                  <td><button>Save</button></td>
+                </tr>
+                <tr>
+                  <td class="part-numbers">PER640-4LFF</td>
+                  <td>DELL R640 4LFF CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="150"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="120"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="200"></td>
+                  <td><button>Save</button></td>
+                </tr>
+                <tr>
+                  <td class="part-numbers">PER640-0SFF</td>
+                  <td>DELL R640 0SFF CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="150"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="120"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="200"></td>
+                  <td><button>Save</button></td>
+                </tr>
+              </table>
+              <p id="next-btn"><a href="#"><---Back- </a><span>  </span><a href="#"> -Next---></a></p>
+            <div class="show-div">
+                <label>Show: <select>
+                    <option value="show10">10</option>
+                    <option value="show20">20</option>
+                    <option value="show40">40</option>
+                    <option value="show40">50</option>
+                    <option value="show50">100</option>
+                </select></label> <br>
+            </div>
+            
+        </div>
+
+        <div id="Blade" class="tab-content">
+            <h1>Blade Runner</h1>
+            <div class="btn-rack-gen">
+              <button id="gen-btn-10th">10th</button>
+              <button id="gen-btn-11th">11th</button>
+              <button id="gen-btn-12th">12th</button>
+              <button id="gen-btn-13th">13th</button>
+              <button id="gen-btn-14th">14th</button>
+              <button id="gen-btn-15th">15th</button>
+          </div>
+          <h2>14th Generation Blades</h2>
+          <table>
+              <tr>
+                <th id="PN-table">PN</th>
+                <th id="Description-table">Description</th>
+                <th id="broker-price">BB Price</th>
+                <th id="min-price">MIN</th>
+                <th id="max-price">MAX</th>
+                <th><button>Export</button></th>
+              </tr>
+              <tr>
+                <td class="part-numbers">BLADE P/N </td>
+                <td>BLADE P/N 8SFF CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="75"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="60"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="100"></td>
+                <td><button>Save</button></td>
+              </tr>
+              <tr>
+                <td class="part-numbers">BLADE P/N </td>
+                <td>BLADE P/N 10SFF CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="150"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="120"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="200"></td>
+                <td><button>Save</button></td>
+              </tr>
+              <tr>
+                <td class="part-numbers">BLADE P/N </td>
+                <td>BLADE P/N 10NVME CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="150"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="120"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="200"></td>
+                <td><button>Save</button></td>
+              </tr>
+              <tr>
+                <td class="part-numbers">BLADE P/N </td>
+                <td>BLADE P/N 4LFF CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="150"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="120"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="200"></td>
+                <td><button>Save</button></td>
+              </tr>
+              <tr>
+                <td class="part-numbers">BLADE P/N </td>
+                <td>BLADE P/N 0SFF CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="150"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="120"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="200"></td>
+                <td><button>Save</button></td>
+              </tr>
+            </table>
+            <p id="next-btn"><a href="#"><---Back- </a><span>  </span><a href="#"> -Next---></a></p>
+          <div class="show-div">
+              <label>Show: <select>
+                  <option value="show10">10</option>
+                  <option value="show20">20</option>
+                  <option value="show40">40</option>
+                  <option value="show40">50</option>
+                  <option value="show50">100</option>
+              </select></label> <br>
+          </div>
+        </div>
+
+        <div id="Tower" class="tab-content">
+            <h1>Le Eiffel Tower</h1>
+            <div class="btn-rack-gen">
+              <button id="gen-btn-10th">10th</button>
+              <button id="gen-btn-11th">11th</button>
+              <button id="gen-btn-12th">12th</button>
+              <button id="gen-btn-13th">13th</button>
+              <button id="gen-btn-14th">14th</button>
+              <button id="gen-btn-15th">15th</button>
+          </div>
+          <h2>14th Generation Towers</h2>
+          <table>
+              <tr>
+                <th id="PN-table">PN</th>
+                <th id="Description-table">Description</th>
+                <th id="broker-price">BB Price</th>
+                <th id="min-price">MIN</th>
+                <th id="max-price">MAX</th>
+                <th><button>Export</button></th>
+              </tr>
+              <tr>
+                <td class="part-numbers">TOWER P/N</td>
+                <td>TOWER P/N 8SFF CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="1370"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="1300"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="0"></td>
+                <td><button>Save</button></td>
+              </tr>
+              <tr>
+                <td class="part-numbers">TOWER P/N</td>
+                <td>TOWER P/N 10SFF CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="150"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="120"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="200"></td>
+                <td><button>Save</button></td>
+              </tr>
+              <tr>
+                <td class="part-numbers">TOWER P/N</td>
+                <td>TOWER P/N 10NVME CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="150"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="120"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="200"></td>
+                <td><button>Save</button></td>
+              </tr>
+              <tr>
+                <td class="part-numbers">TOWER P/N</td>
+                <td>TOWER P/N 4LFF CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="150"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="120"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="200"></td>
+                <td><button>Save</button></td>
+              </tr>
+              <tr>
+                <td class="part-numbers">TOWER P/N</td>
+                <td>TOWER P/N 0SFF CTO CHASSIS - CONTACT FOR CUSTOM BUILD!</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="150"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="120"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="200"></td>
+                <td><button>Save</button></td>
+              </tr>
+            </table>
+            <p id="next-btn"><a href="#"><---Back- </a><span>  </span><a href="#"> -Next---></a></p>
+          <div class="show-div">
+              <label>Show: <select>
+                  <option value="show10">10</option>
+                  <option value="show20">20</option>
+                  <option value="show40">40</option>
+                  <option value="show40">50</option>
+                  <option value="show50">100</option>
+              </select></label> <br>
+          </div>
+        </div>
+
+        <div id="Spares" class="tab-content">
+            <h1>Spare me</h1>
+            <table>
+              <tr>
+                <th id="PN-table">PN</th>
+                <th id="Description-table">Description</th>
+                <th id="broker-price">BB Price</th>
+                <th id="min-price">MIN</th>
+                <th id="max-price">MAX</th>
+                <th><button>Export</button></th>
+              </tr>
+              <tr>
+                <td class="part-numbers">SPARE</td>
+                <td>SOMETHING DESCRIBING SPARES</td>
+                <td>$<input id="spare-price"class="price-input" type="number" min="0" placeholder="115"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="100"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="130"></td>
+                <td><button>Save</button></td>
+              </tr>
+              <tr>
+                <td class="part-numbers">SPARE</td>
+                <td>SOMETHING DESCRIBING SPARES</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="115"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="100"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="130"></td>
+                <td><button>Save</button></td>
+              </tr>
+              <tr>
+                <td class="part-numbers">SPARE</td>
+                <td>SOMETHING DESCRIBING SPARES</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="288"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="240"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="320"></td>
+                <td><button>Save</button></td>
+              </tr>
+              <tr>
+                <td class="part-numbers">SPARE</td>
+                <td>SOMETHING DESCRIBING SPARES</td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="92"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="70"></td>
+                <td>$<input class="price-input" type="number" min="0" placeholder="110"></td>
+                <td><button>Save</button></td>
+              </tr>
+            </table>
+            <p id="next-btn"><a href="#"><---Back- </a><span>  </span><a href="#"> -Next---></a></p>
+            
+        </div>
+
+        <div id="Controller" class="tab-content">
+            <h1>Controller</h1>
+            <table>
+                <tr>
+                  <th id="PN-table">PN</th>
+                  <th id="Description-table">Description</th>
+                  <th id="broker-price">BB Price</th>
+                  <th id="min-price">MIN</th>
+                  <th id="max-price">MAX</th>
+                  <th><button>Export</button></th>
+                </tr>
+                <tr>
+                  <td class="part-numbers">H740-MINI-HP</td>
+                  <td>DELL PERC H740 MINI SAS 12G SATA 6G PCI-E HIGH PROFILE</td>
+                  <td>$<input id="controller-price" class="price-input" type="number" min="0" placeholder="160"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="100"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="0"></td>
+                  <td><button>Save</button></td>
+                </tr>
+                <tr>
+                  <td class="part-numbers">H730 (1GB) Mini</td>
+                  <td>DELL PERC H730 MINI 1GB RAID CONTROLLER</td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="115"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="100"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="130"></td>
+                  <td><button>Save</button></td>
+                </tr>
+                <tr>
+                  <td class="part-numbers">H730P (2GB) PCI-E</td>
+                  <td>DELL H730P 2GB CONTOLLER CARD BLADE</td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="288"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="240"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="320"></td>
+                  <td><button>Save</button></td>
+                </tr>
+                <tr>
+                  <td class="part-numbers">H330 Mini (0MB)</td>
+                  <td>DELL PERC H330 MINI MONO RAID CONTROLLER</td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="92"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="70"></td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="110"></td>
+                  <td><button>Save</button></td>
+                </tr>
+              </table>
+              <p id="next-btn"><a href="#"><---Back- </a><span>  </span><a href="#"> -Next---></a></p>
+            <div class="show-div">
+                <label>Show: <select>
+                    <option value="show10">10</option>
+                    <option value="show20">20</option>
+                    <option value="show40">40</option>
+                    <option value="show40">50</option>
+                    <option value="show50">100</option>
+                </select></label> <br>
+            </div>
+            
+        </div>
+        <div class="constituents">
+            <H2>Constituents<i class="fa fa-arrow-down"></i></H2>
+            <table>
+                <tr>
+                  <th id="PN-table">PN</th>
+                  <th id="Description-table">Description</th>
+                  <th id="stock-table">Stock</th>
+                  <th id="broker-price">Price $</th>
+
+                </tr>
+                <tr>
+                  <td class="part-numbers">PER640ENT-H740PMINI-8SFFB-REF</td>
+                  <td>DELL PER640 H740P MINI 8*SFF ENTERPRISE LICENSE CTO</td>
+                  <td>44</td>
+                  <td>$<input id="total" class="price-input" type="number" min="0" placeholder="1650"></td>
+                </tr>
+                <tr>
+                  <td class="part-numbers">Part Number</td>
+                  <td>something something something something something</td>
+                  <td>19</td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="560"></td>
+                </tr>
+                <tr>
+                  <td class="part-numbers">Part Number</td>
+                  <td>something something something something something</td>
+                  <td>20</td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="1230"></td>
+                </tr>
+                <tr>
+                  <td class="part-numbers">Part Number</td>
+                  <td>something something something something something</td>
+                  <td>101</td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="800"></td>
+                </tr>
+                <tr>
+                  <td class="part-numbers">Part Number</td>
+                  <td>something something something something something</td>
+                  <td>92</td>
+                  <td>$<input class="price-input" type="number" min="0" placeholder="250"></td>
+                </tr>
+              </table>
+
+        </div>
+
+    </div>
+</body>    
+
+</html>

@@ -1,0 +1,357 @@
+body {
+    background-color: #e6e6e6;
+    font-family: Roboto,Helvetica Neue,sans-serif;
+}
+
+.parent {
+    background-color: #e6e6e6;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    }
+    .Top-of-page {
+        grid-area: 1 / 2 / 2 / 5;
+        background-color: white;
+        color: black;
+        height: 180px;
+        }
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    }
+
+.parent2 {
+    background-color: #e6e6e6;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  
+    }    
+
+    .Top-of-page-cto {
+        grid-area: 1 / 2 / 2 / 6;
+        background-color: white;
+        color: black;
+        height: 290px;
+       }
+
+        .search-bar {
+            font-size: 120%;
+            padding-left: 2%;
+            padding-top: 5px;
+            width: 90%;
+            height: 54px;
+            color: black;
+            border: none;
+        
+            
+        }
+        .search-bar:focus::placeholder { opacity: 0; }
+
+        h1 {
+            text-decoration: underline;
+            color: black;
+            text-align: center;
+            font-size: 200%;
+            
+        }
+
+        #dell-CTO-rack {
+            position: relative;
+            width: 20%;
+            height: 30px;
+            left: 10%;
+            top: 30px;
+            border-radius: 20px;
+            font-size: large;
+            font-weight: bold;
+        }
+        #dell-CTO-rack:hover { background-color: gray; color: white; border: none; }
+
+        #dell-CTO-blade {
+            position: relative;
+            width: 20%;
+            height: 30px;
+            left: 20%;
+            top: 30px;
+            border-radius: 20px;
+            font-size: large;
+            font-weight: bold;
+        }
+        #dell-CTO-blade:hover { background-color: gray; color: white; border: none; }
+
+        #dell-CTO-tower {
+            position: relative;
+            width: 20%;
+            height: 30px;
+            left: 30%;
+            top: 30px;
+            border-radius: 20px;
+            font-size: large;
+            font-weight: bold;
+        }
+        #dell-CTO-tower:hover { background-color: gray; color: white; border: none; }
+
+        #dell-CTO-spares {
+            position: relative;
+            width: 20%;
+            height: 30px;
+            right: 35%;
+            top: 90px;
+            border-radius: 20px;
+            font-size: large;
+            font-weight: bold;
+        }
+        #dell-CTO-spares:hover { background-color: gray; color: white; border: none; }
+
+        #dell-CTO-controller {
+            position: relative;
+            width: 20%;
+            height: 30px;
+            left: 55%;
+            top: 60px;
+            border-radius: 20px;
+            font-size: large;
+            font-weight: bold;
+            
+        }
+        #dell-CTO-controller:hover { background-color: gray; color: white; border: none; }
+
+    .Right-sidebar {
+         grid-area: 2 / 5 / 6 / 6;
+         background-color: e6e6e6;
+         height: 640px;
+         
+        }
+
+    .Left-sidebar { 
+         grid-area: 1 / 1 / 6 / 2;
+         background-color: #2f4050;
+         height: 900px;
+         color: white;
+         font-weight:bolder;
+         padding-top: 30px;
+         padding-left: 30px;
+         
+        }
+    .Left-sidebar-cto { 
+         grid-area: 1 / 1 / 6 / 2;
+         background-color: #2f4050;
+         height: 1450px;
+         color: white;
+         font-weight:bolder;
+         padding-top: 30px;
+         padding-left: 30px;
+         
+        }
+        .currency-side-input {
+            border-radius: 5px;
+            width: 30%;
+            height: 20px;
+            padding: 5px;
+            
+        
+        }
+        #currency-label {
+            color: #e6e6e6;
+            padding-right: 95px;
+            padding-left: 5px;
+            padding-bottom: 20px;
+        }
+
+    .option1 {
+         grid-area: 2 / 2 / 3 / 3; 
+         background-color: gray;
+         height: 160px;
+         border-radius: 10px;
+        }
+
+    .option2 {
+         grid-area: 2 / 3 / 3 / 4;
+         background-color: gray;
+         height: 160px;
+         border-radius: 10px;
+        }
+
+    .option3 {
+         grid-area: 2 / 4 / 3 / 5;
+         background-color: gray;
+         height: 160px;
+         border-radius: 10px;
+        }
+
+    .content {
+         grid-area: 3 / 2 / 6 / 5;
+         background-color: #e6e6e6;
+         height: 480px;
+         border-radius: 10px;
+        }
+
+    .server-options {
+        border-radius: 10px;
+        font-size: 150%;
+        width: 100%;
+        height: 95%;
+    }
+
+    .server-options:hover { background-color: gray; color: white; border: none; }
+
+    #users-name {
+        color: #e6e6e6;
+        font-size: 100%;
+        padding-top: 10px;
+        padding-right: 30px;
+        padding-bottom: 40px;
+    }
+    #bar-ting {
+        color: white;
+        font-size: 160%;
+        background-color: #008abb;
+        margin-top: 14px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        margin-left: 15px;
+        font-weight: 400;
+        border-color: #008abb;
+        border-width: 1px;
+        border: solid;
+        
+    }
+    #dashboard {
+        padding-bottom: 5px;
+        color: #e6e6e6;
+    }
+
+#dell-cto-h1 {
+    color: black;
+    text-align: center;
+    font-size: 200%;
+
+}
+
+.tab-content {
+     grid-area: 2 / 2 / 4 / 6;
+     animation: fadeEffect 1s;
+     background-color: #e6e6e6;
+     padding-top: 2%;
+    }
+
+.constituents {
+    display: null;
+    grid-area: 4 / 2 / 6 / 6;
+    background-color: #e6e6e6; 
+    }
+
+table {
+    border-collapse: collapse;
+    border: 1px solid;
+    border-color: #2f4050;
+    width: 100%;
+}
+#pn-table {
+    width: 90%;
+}
+
+th {
+    background-color: #2f4050;
+    color: white;
+    text-align: left;
+}
+td {
+    text-align: left;
+    border-bottom: 1px solid;
+}
+
+#next-btn {
+    position: relative;
+    text-align: center;
+    top: 30px;
+}
+
+.show-div {
+    position: relative;
+    left: 1400px;
+    top: 5px;
+}
+
+
+.price-input {
+    width: 50px;
+    height: 20px;
+}
+.constituents-btn {
+    position: relative;
+    top: 250px;   
+}
+
+.part-numbers {
+    font-weight: bold;
+}
+.stock-price {
+    font-size: smaller;
+    font-weight: bolder;
+}
+.btn-rack-gen {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+/* Button generations */
+
+#gen-btn-10th {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    color: #008abb;
+    right: 50px;
+    box-shadow: 2.5px 5px;
+}
+#gen-btn-11th {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    color: #008abb;
+    right: 30px;
+    box-shadow: 2.5px 5px;
+}
+#gen-btn-12th {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    color: #008abb;
+    right: 10px;
+    box-shadow: 2.5px 5px;
+}
+#gen-btn-13th {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    color: #008abb;
+    left: 10px;
+    box-shadow: 2.5px 5px;
+}
+#gen-btn-14th {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    color: gray;
+    left: 30px;
+    box-shadow: 5px 8px;
+}
+#gen-btn-15th {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    color: #008abb;
+    left: 50px;
+    box-shadow: 2.5px 5px;
+}
